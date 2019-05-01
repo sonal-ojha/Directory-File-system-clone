@@ -1,0 +1,27 @@
+.info-modal {
+    background: #FFFFFF;
+    border: 1px solid rgba(221,224,228,0.70);
+    box-shadow: 0 16px 64px 0 rgba(0,0,0,0.08);
+    border-radius: 8px;
+    width: 316px;
+    height: 305px;
+    padding: 15px 20px;
+}
+
+.fileHeader {
+    margin: 15px 10px;
+}
+
+.infoListItem {
+    font-size: 16px;
+    color: #81878C;
+    margin: 15px 0px 10px 60px;
+}
+
+.iconFileType {
+    margin: 15px 0px 30px 105px;
+}
+
+.pointer {
+    cursor: pointer;
+}

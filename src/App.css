@@ -1,0 +1,77 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+}
+
+.sidebar-container{
+  width: 30%;
+  border-right: 0.5px solid #F9FAFC;
+  background: #F9FAFC;
+}
+
+.folder-container{
+  width: 70%;
+  background: #FDFDFD;
+}
+
+.sideBarItem {
+  padding: 25px 30px;
+  cursor: pointer;
+}
+
+.backgroundBlur {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* reusable styles */
+
+.displayFlex {
+  display: flex;
+}
+
+.justifyLeft {
+  justify-content: left;
+}
+
+.justifySpaceBetween {
+  justify-content: space-between;
+}
+
+.justifySpaceAround {
+  justify-content: space-around;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-t-20 {
+  margin-top: 10px;
+}
+
+.m-b-20 {
+  margin-bottom: 20px;
+}
+
+.f-18 {
+  font-size: 18px;
+}

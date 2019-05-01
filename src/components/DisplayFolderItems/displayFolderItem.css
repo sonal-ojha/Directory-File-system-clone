@@ -1,0 +1,117 @@
+.createItem {
+    margin: 5px 30px;
+}
+
+.createNewContainer {
+    width: 316px;
+    height: 450px;
+    padding: 15px 15px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1px solid rgba(221,224,228,0.70);
+    box-shadow: 0 16px 64px 0 rgba(0,0,0,0.08);
+    border-radius: 8px;
+}
+
+.btn {
+    background: #FDFDFD;
+    border: none;
+}
+
+.create-header {
+    margin: 5px 10px 5px 100px;
+}
+
+.tabContainer {
+    border: 1px solid #DDE0E4;
+    border-radius: 8px;
+    width: 130px;
+    height: 32px;
+    line-height: 35px;
+    margin-left: 75px;
+    margin-top: 20px;
+}
+
+.file {
+    border-right: 1px solid #DDE0E4;
+}
+
+.tabItem{
+    width: 65px;
+}
+
+.createInput {
+    width: 220px;
+    height: 40px;
+    margin: 10px;
+    background: #FFFFFF;
+    border: 1px solid #DDE0E4;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #AFB2B6;
+    padding-left: 5px;
+}
+
+.createBtn {
+    width: 220px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.error {
+    font-size: 14px;
+    color: red;
+}
+
+.activeItem {
+    background: #4AB7FF;
+}
+
+.listItem {
+    width: 82px;
+    height: 88px;
+    padding: 15px;
+    margin: 5px;
+}
+
+.folderItems {
+    padding: 20px;
+}
+
+.fileName {
+    margin-left: 5px;
+}
+
+.optionContainer {
+    width: 150px;
+    background: #FFFFFF;
+    border: 1px solid rgba(221,224,228,0.50);
+    box-shadow: 0 12px 24px 0 rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+.optionItem {
+    padding: 15px 0px 0px 25px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.optionItem:hover {
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.deleteText {
+    font-family: Lato-Regular;
+    font-size: 16px;
+    color: #FF5942;
+}
+
+.infoText {
+    font-family: Lato-Regular;
+    font-size: 16px;
+    color: #535B62;
+}
