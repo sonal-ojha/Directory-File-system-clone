@@ -46,7 +46,9 @@ class CreateNew extends Component {
     data.type = createSelectedItem;
     data.children = [];
     data.parent = path.join('/');
-    createNewItem(data);
+    if (path.length < 3) {
+      createNewItem(data);
+    }
     handleClose();
   }
 

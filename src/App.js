@@ -8,6 +8,8 @@ class App extends Component {
   state = {
     path: ['root'],
     displaySubItemList: '',
+    filterData: [],
+    searchText: ""
   }
 
   handlePath = (item) => {
@@ -73,11 +75,25 @@ class App extends Component {
   }
 
   handleLocalItemSearch = (value) => {
-    // const { path } = this.state;
-    // const { rootNodes } = this.props;
-    // if (path.length === 1) {
-    //   const filterItems 
-    // }
+    const { rootNodes } = this.props;
+    const { path } = this.state;
+    let filterItems = [];
+    if (path.length === 1) {
+      filterItems = rootNodes.filter(item => item.name === value);
+    } else if (path.length === 2) {
+      const subIdx = rootNodes.findIndex(item => item.name === path[1]);
+      if (subIdx !== undefined) {
+        const filterSubItems = rootNodes[subIdx].children.filter(item => item.name === value);
+        if (filterSubItems && filterSubItems.length > 0) {
+          filterItems = [...rootNodes];
+          filterItems[subIdx].children = filterSubItems;
+        }
+      }
+    }
+    this.setState({
+      searchText: value,
+      filterData: filterItems,
+    })
   }
 
   displayideBarItems = (item, idx) => {
@@ -101,7 +117,7 @@ class App extends Component {
 
   render() {
     const { rootNodes } = this.props;
-    const { path } = this.state;
+    const { path, filterData, searchText } = this.state;
     return (
       <div className="App">
         <div className="sidebar-container">
@@ -112,7 +128,7 @@ class App extends Component {
         </div>
         <div className="folder-container">
           <Header path={path} moveUp={this.handleLevelUp} handleLocalSearch={this.handleLocalItemSearch} />
-          <DisplayFolderItems listItems={rootNodes} path={path} handleSubPath={this.handleSubPath} />
+          <DisplayFolderItems listItems={searchText ? filterData : rootNodes} path={path} handleSubPath={this.handleSubPath} />
         </div>
       </div>
     );
