@@ -58,6 +58,7 @@
     border-radius: 8px;
     font-size: 14px;
     color: #FFFFFF;
+    cursor: pointer;
 }
 
 .error {
@@ -114,4 +115,8 @@
     font-family: Lato-Regular;
     font-size: 16px;
     color: #535B62;
+}
+
+.pointer {
+    cursor: pointer;
 }

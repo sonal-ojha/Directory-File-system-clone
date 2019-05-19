@@ -34,24 +34,31 @@ class DisplayFolderItems extends Component {
         }
     }
 
+    handleDoubleClick = (item) => {
+        const { handleSubPath } = this.props;
+        if(item.type === 'folder') {
+            handleSubPath(item);
+        }
+    }
+
     getListedItems = () => {
         const { listItems, path } = this.props;
         const currentPath = path.join('/');
-        if (currentPath === 'root'){
+        if (currentPath === 'root' && path.length === 1){
             return listItems && listItems.length > 0 && listItems.map((item, idx) => (
-                <div key={idx} className="listItem" style={{ display: 'relative'}}>
+                <div key={idx} className="listItem" style={{ display: 'relative'}} onDoubleClick={() => this.handleDoubleClick(item)}>
                     <button className="btn" onMouseDown={(e) => this.handleItemOptionPopup(e, item)}>
                         {item.type === "file" ? <i className="fa fa-file fa-5x" aria-hidden="true"></i> : <i className="fa fa-folder fa-5x" aria-hidden="true"></i>}
                     </button>
                     <div className="fileName">{item.name}</div>
                 </div>
             ));
-        } else {
+        } else if (path.length === 2){
             const findParent = currentPath.split('/')[1];
             const itemIndex = listItems && listItems.length > 0 && listItems.findIndex(item => item.name === findParent);
             if (itemIndex >= 0){
                 return listItems && listItems.length > 0 && listItems[itemIndex].children.length > 0 && listItems[itemIndex].children.map((item, idx) => (
-                    <div key={idx} className="listItem">
+                    <div key={idx} className="listItem" onDoubleClick={() => this.handleDoubleClick(item)}>
                         <button className="btn" onMouseDown={(e) => this.handleItemOptionPopup(e, item)}>
                             {item.type === "file" ? <i className="fa fa-file fa-5x" aria-hidden="true"></i> : <i className="fa fa-folder fa-5x" aria-hidden="true"></i>}
                         </button>
@@ -118,6 +125,7 @@ DisplayFolderItems.propTypes = {
     path: PropTypes.array.isRequired,
     listItems: PropTypes.array.isRequired,
     deleteItem: PropTypes.func.isRequired,
+    handleSubPath: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({});
