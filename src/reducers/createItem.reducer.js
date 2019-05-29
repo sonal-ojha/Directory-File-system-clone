@@ -13,7 +13,6 @@ function deleteFileItem(state, action) {
     const { root } = state;
     const { children } = root;
     const data = [...children];
-    debugger;
     if(payload.parent === 'root'){
         const findDeleteId = data.findIndex(item => item.name === payload.name);
         data.splice(findDeleteId, 1);
