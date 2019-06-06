@@ -15,6 +15,7 @@
     "redux-thunk": "2.3.0"
   },
   "devDependencies": {
+    "react-test-renderer": "16.8.6",
     "redux-devtools-extension": "2.13.8"
   },
   "scripts": {

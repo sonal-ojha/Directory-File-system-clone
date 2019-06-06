@@ -1,0 +1,56 @@
+exports[`test File Info Popup 1`] = `
+<div
+  className="backgroundBlur">
+  <div
+    className="info-modal">
+    <div
+      className="displayFlex textAlignCenter fileHeader">
+      <div
+        className="f-18"
+        style={
+          Object {
+            "width": "280px",
+          }
+        }>
+        File Info
+      </div>
+      <button
+        className="btn pointer"
+        onClick={[Function]}>
+        <i
+          aria-hidden="true"
+          className="fa fa-times fa-2x" />
+      </button>
+    </div>
+    <div
+      className="displayFlex textAlignCenter iconFileType">
+      <i
+        aria-hidden="true"
+        className="fa fa-folder fa-5x" />
+    </div>
+    <div
+      className="m-10">
+      <div
+        className="infoListItem">
+        Name : 
+        f1
+      </div>
+      <div
+        className="infoListItem">
+        Size : 
+        12kb
+      </div>
+      <div
+        className="infoListItem">
+        Creator Name : 
+        self
+      </div>
+      <div
+        className="infoListItem">
+        Created At : 
+        12/12/2019
+      </div>
+    </div>
+  </div>
+</div>
+`;
